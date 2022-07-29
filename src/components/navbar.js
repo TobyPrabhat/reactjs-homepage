@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from "../Images/logo.svg"
 import Fire from "../Images/fire.svg"
 import Profile from "../Images/profile.jpg"
+import {Link} from "react-router-dom"
 import "./navbar.css"
 const navbar = () => {
   const toggle = () =>{
@@ -25,13 +26,13 @@ const navbar = () => {
       <div className='socialInfo'>
         <div className = "socialInfoList">
         {/* eslint-disable-next-line */}
-          <a href='#'>Nav Text</a>
+          <Link to='/'>Home</Link>
+          {/* eslint-disable-next-line*/}
+          <Link to = "/contacts">Contact us</Link>
           {/* eslint-disable-next-line */}
           <a href='#'>Nav Text One</a>
           {/*eslint-disable-next-line */}
           <a href='#'>Nav Text Two</a>
-          {/* eslint-disable-next-line*/}
-          <a href='#'>Contact us</a>
         </div>
       </div>
       </div>

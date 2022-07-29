@@ -1,11 +1,22 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom"
+import Home from './components/Home';
+import Contact from './components/contact';
 import Navbar from './components/navbar';
-import Data from './components/data'
 function App() {
   return (
     <div>
+      <Router>
       <Navbar />
-      <Data />
+      <Routes>
+        <Route path = "/" element = {<Home />} />
+        <Route exact path = "/contacts" element = {<Contact />} />
+      </Routes>
+      </Router>
     </div>
   );
 }
