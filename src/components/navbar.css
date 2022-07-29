@@ -1,0 +1,95 @@
+.Navbar{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+}
+.Hamburger{
+  display: none;
+  background-color: black;
+  color: wheat;
+  border: black solid 1px;
+  min-width: 38px;
+  min-height: 38px;
+  font-size: larger;
+}
+.LeftPortion{
+  display: flex;
+  align-items: center;
+}
+.socialInfoList{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 8%;
+  width: 45vw;
+}
+.socialInfoList a{
+  text-decoration: none;
+  margin: 2%;
+  color: white;
+}
+.userImage{
+  display: flex;
+  align-items: center;
+}
+.userImage span{
+  margin-right: 1vw;
+}
+
+.userProfile{
+  border-radius: 50%;
+  max-width: 48px;
+  max-height: 48px;
+  margin-right: 2vw;
+}
+
+@media only screen and (max-width: 954px){
+  .socialInfoList{
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 856px){
+  .socialInfoList{
+    width: 55vw;
+  }
+}
+@media only screen and (max-width: 778px){
+  .socialInfoList{
+    width: 58vw;
+    margin-inline: 1%;
+  }
+}
+@media only screen and (max-width: 738px){
+  .socialInfoList{
+    width: 63vw;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
+
+@media only screen and (max-width: 680px){
+  .LeftPortion{
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    opacity: 0.8;
+  }
+  .Logo{
+    width: 100%;
+  }
+  .Logo img{
+    width: 100%;
+  }
+  .socialInfoList{
+    flex-direction: column;
+    width: 100%;
+  }
+  .Hamburger{
+    display: block;
+    cursor: pointer;
+  }
+}
