@@ -4,6 +4,8 @@
   background-color: black;
   color: white;
   justify-content: space-between;
+  position: relative;
+  z-index: 999;
 }
 .Hamburger{
   display: none;

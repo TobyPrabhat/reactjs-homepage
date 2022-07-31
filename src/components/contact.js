@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
   withGoogleMap,
-  withScriptjs,
   GoogleMap,
   Marker,
   InfoWindow
@@ -27,8 +26,8 @@ function Map() {
 
   return (
     <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
+      defaultZoom={5}
+      defaultCenter={{ lat: 28.704060, lng: 77.102493 }}
       defaultOptions={{ styles: mapStyles }}
     >
       {
@@ -39,12 +38,12 @@ function Map() {
             lat: park.geometry.coordinates[1],
             lng: park.geometry.coordinates[0]
           }}
-          onClick={() => {
-            setSelectedPark(park);
-          }}
           icon={{
             url: `/skateboarding.svg`,
-            scaledSize: new window.google.maps.Size(100, 100)
+            scaledSize: new window.google.maps.Size(25, 25)
+          }}
+          onClick = {() => {
+            setSelectedPark(park);
           }}
         />
         ))}
@@ -69,15 +68,15 @@ function Map() {
   );
 }
 
-const MapWrapped = withScriptjs(withGoogleMap(Map));
+const MapWrapped = withGoogleMap(Map);
 
 export default function App() {
-  const url = "AIzaSyBDhw7AGGst4dG5Oblgi64AgZCAyksGm9I";
+  // const url = "AIzaSyBDhw7AGGst4dG5Oblgi64AgZCAyksGm9I";
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100%", height: "87vh" }}>
       <MapWrapped
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBDhw7AGGst4dG5Oblgi64AgZCAyksGm9I`}
-        loadingElement={<div style={{ height: `100%` }} />}
+        // googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${url}`}
+        // loadingElement={<div style={{ height: `100%`, width: `100vw` }} />}
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
