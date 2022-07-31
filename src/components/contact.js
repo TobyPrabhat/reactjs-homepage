@@ -71,7 +71,6 @@ function Map() {
 const MapWrapped = withGoogleMap(Map);
 
 export default function App() {
-  // const url = "AIzaSyBDhw7AGGst4dG5Oblgi64AgZCAyksGm9I";
   return (
     <div style={{ width: "100%", height: "87vh" }}>
       <MapWrapped
@@ -130,7 +129,6 @@ export default function App() {
 
 // const Contact = () => {
 //   const { isLoaded } = useLoadScript({
-//     googleMapsApiKey: "AIzaSyBDhw7AGGst4dG5Oblgi64AgZCAyksGm9I",
 //   });
 
 //   if (!isLoaded) return <div>Loading...</div>;
